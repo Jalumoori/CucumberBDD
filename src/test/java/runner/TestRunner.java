@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = {"src\\test\\resoures\\features"},
-		glue = {"stepDefinitions"},
+		glue = {"stepDefinitions","hooks"},
 		tags="@RunThisScenario",
 		plugin = {"pretty"}
 		)

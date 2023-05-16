@@ -1,28 +1,25 @@
 package stepDefinitions;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.time.Duration;
 import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import Utilities.UtilityClass;
+import driverfactory.DriverFactory;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class Register {
 	WebDriver driver;
 	
 	@Given("I am on the AUT Homepage")
 	public void i_am_on_the_aut_homepage() {
-	    driver = new ChromeDriver();
-	    driver.manage().deleteAllCookies();
-	    driver.manage().window().maximize();
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	    driver = DriverFactory.getDriver();
 	    driver.get("https://tutorialsninja.com/demo/");
 	    
 	}
