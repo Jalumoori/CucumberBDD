@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src\\test\\resoures\\features"},
 		glue = {"stepDefinitions","hooks"},
-		tags="@RunThisScenario",
-		plugin = {"pretty"}
+//		tags="@Valid",
+		plugin = {"pretty","html:target\\cucumberReports\\CucumberReport.html"}
 		)
 public class TestRunner {
 

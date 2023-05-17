@@ -5,9 +5,7 @@ Feature: Validate Register functionality
     Given I am on the AUT Homepage
 
   @Valid
-  Scenario: 
-    Validate Register functionality with valid all data
-
+  Scenario: Validate Register functionality with valid all data
     When I navigate to Register page
     And I enter all the valid details
       | firstName        | abcdef |
@@ -20,9 +18,7 @@ Feature: Validate Register functionality
     And I click on continue
     Then I should see account created success message
 
-  Scenario Outline: 
-    Validate Register functionality with duplicate Email_id
-
+  Scenario Outline: Validate Register functionality with duplicate Email_id
     When I navigate to Register page
     And I enter all the valid details
       | firstName        | abcdef |
@@ -30,7 +26,7 @@ Feature: Validate Register functionality
       | phone            | 123456 |
       | password         | abcdef |
       | Password_Confirm | abcdef |
-    And I enter duplicate "<email>"
+    And I enter duplicate <email>
     And click on privacy policy "yes"
     And I click on continue
     Then I should see email already registered message
@@ -39,9 +35,8 @@ Feature: Validate Register functionality
       | email                |
       | abcdef2220@gmail.com |
 
-	@RunThisScenario
-  Scenario: 
-    Validate Register functionality with no details
+  @RunThisScenario
+  Scenario: Validate Register functionality with no details
     When I navigate to Register page
     And click on privacy policy "yes"
     And I click on continue
