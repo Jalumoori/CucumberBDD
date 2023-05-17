@@ -1,0 +1,6 @@
+16:31:20 [main] INFO  stepDefinitions.Register - Launched url : https://tutorialsninja.com/demo/
+16:31:20 [main] INFO  stepDefinitions.Register - Navigated to homepage
+16:31:21 [main] INFO  stepDefinitions.Register - Register page got opened...
+16:31:21 [main] INFO  stepDefinitions.Register - Selected the Privacy Policy on Register page
+16:31:22 [main] INFO  stepDefinitions.Register - Submitted the regestration Page
+16:31:22 [main] INFO  hooks.Hooks - Validate Register functionality with no details passed
